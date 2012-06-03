@@ -1,7 +1,8 @@
 header {
-	height: 100px;
+	padding: 1.5em 0;
 }
 #logo { /* add the logo */
+	display: block;
 	background: transparent url('../img/LichfieldLiveLogo.png') no-repeat top left;
 	width: 180px;
 	height: 80px;
@@ -9,4 +10,13 @@ header {
 #logo span {
 	display: none;
 	visibility: hidden;
+}
+#header-ad {
+	text-align: center;
+}
+
+article#post-123 {
+	background: transparent url('../img/Torch-Relay-Day.jpg') no-repeat top left;
+	width: 461px;
+	height: 271px;
 }
