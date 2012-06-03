@@ -7,50 +7,74 @@
 		
 		<link href="css/bootstrap.css" rel="stylesheet">
 	    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-	    <style type="text/css">
-			/*#logo {
-				background: transparent url('http://lichfieldlive.co.uk/wp-content/uploads/2011/09/LichfieldLiveLogo-180x80.png') no-repeat top left;
-				width: 180px;
-				height: 80px;
-			}
-			#logo span {
-				display: hidden;
-				visibility: none;
-			}*/
-	    </style>
+	    <link href="css/custom.css" rel="stylesheet">
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
 	    
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/bootstrap-dropdown.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+	    		$('.dropdown-toggle').dropdown()
+	    	});
+    	</script>
 	</head>
 	
 	<body>
-		<header>
-			<div>
-				<div id="logo" class="span4"><span>Lichfield Live</span></div>
-			</div>
+		<div id="wrap">
+			<header class="row">
+				<div class="span4">
+					<div id="logo"><span>Lichfield Live</span></div>
+				</div>
+			</header>
 			
-			<nav class="navbar">
+			<nav class="navbar row">
 				<div class="navbar-inner">
 					<div class="container">
-						<ul class="nav nav-pills">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">News</a></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">What's On <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Lichfield Festival 2012</a></li>
-									<li><a href="#">Olympic Torch Relay</a></li>
-									<li><a href="#">Fuse Festival 2012</a></li>
-									<li><a href="#">Diamond Jubilee</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Sports</a></li>
-							<li><a href="#">Politics</a></li>
-						</ul>
+						<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<div class="nav-collapse">
+							<ul class="nav nav-pills">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">News</a></li>
+								<li class="dropdown"><a href="events" class="dropdown-toggle" data-toggle="#">What's On <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">All Upcoming Events</a></li>
+										<li><a href="#">Lichfield Festival 2012</a></li>
+										<li><a href="#">Olympic Torch Relay</a></li>
+										<li><a href="#">Fuse Festival 2012</a></li>
+										<li><a href="#">Diamond Jubilee</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Sports</a></li>
+								<li><a href="#">Politics</a></li>
+							</ul>
+							<form class="navbar-search pull-right">
+								<input type="text" class="search-query" placeholder="Search">
+							</form>
+						</div>
 					</div>
 				</div>
 			</nav>
-		</header>
+			
+			<article class="row">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor mattis faucibus. Ut ac leo sapien. Donec non diam vel metus gravida aliquam et nec ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla urna odio, adipiscing sed vulputate sit amet, imperdiet id ipsum. Etiam id leo nibh, ut pellentesque nulla. Integer nisi nibh, lacinia vitae aliquam eu, scelerisque non quam. Sed felis dui, convallis et eleifend quis, interdum vitae augue.</p>
+				<p>In hac habitasse platea dictumst. Nulla et risus ante. Cras tincidunt tempor lacus, a pellentesque est rutrum nec. Phasellus tristique sapien et arcu elementum molestie. In elementum urna at mi condimentum fringilla. Nullam justo eros, porttitor et euismod id, lacinia sed felis. Pellentesque consequat sem non nulla pretium venenatis. Etiam vitae massa mi. Morbi lacus sem, congue vitae commodo eget, cursus et lorem. Fusce nec lacinia magna. Ut quis arcu lorem. Donec vitae mauris in tortor laoreet iaculis. Nam neque lacus, gravida nec ornare at, semper nec nisl.</p>
+				<p>Aliquam a diam nunc, eget varius nisl. Integer tortor libero, laoreet non tincidunt ut, iaculis in augue. In ultrices, dui et malesuada pellentesque, mauris mauris porta lacus, sed porta mi tortor id diam. Curabitur at arcu quis purus interdum blandit ut malesuada lectus. Quisque et tortor ultrices augue laoreet blandit quis ac magna. Fusce ac ultrices ante. Aenean at ante adipiscing odio lobortis vestibulum elementum a nibh. Curabitur porttitor, eros dapibus convallis placerat, magna mauris feugiat elit, eu pulvinar nulla odio vitae felis. Nulla iaculis viverra ante et rhoncus. Integer a dolor non erat ultrices convallis. Ut eget elit risus. Nulla rhoncus blandit ligula, varius euismod nisi dapibus id. Suspendisse ullamcorper pharetra sapien, vel faucibus neque laoreet id. Donec tortor sem, consequat et lacinia non, tempor sit amet quam.</p>
+				<p>Vestibulum gravida ornare erat sed hendrerit. Maecenas feugiat urna at tellus hendrerit lacinia. Suspendisse ac sapien erat. Pellentesque non sapien mauris. In at purus diam, nec dapibus turpis. Phasellus fermentum tristique ante a fermentum. Morbi sit amet lacus magna. Fusce adipiscing tellus gravida est vulputate porttitor.</p>
+				<p>Donec sed elit a ligula rutrum interdum. Fusce dapibus scelerisque justo, lacinia accumsan odio dictum sed. Cras hendrerit pulvinar massa eu lobortis. Pellentesque eu enim est. Nulla et quam urna. In eget nunc neque. Nulla facilisi. Proin ac odio ut ligula facilisis ultricies ut eget sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce fermentum blandit posuere. Ut quis justo sem. Suspendisse viverra arcu eu dui ultricies porta. Curabitur suscipit congue eros et eleifend. In sed malesuada sem. Praesent a elit quis ipsum pellentesque posuere ac et arcu. Morbi placerat lacinia luctus.</p>
+				<p>Sed vehicula erat accumsan sem ornare nec pharetra elit egestas. Etiam ac orci sit amet nisl malesuada malesuada. Nam ac odio sit amet ipsum malesuada condimentum a eget arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Donec nisl nibh, dictum id feugiat nec, pellentesque eget justo. Donec sed lectus urna. Vivamus neque nunc, ornare ac tempus vel, placerat vel arcu. Nulla sit amet dui sed urna sagittis scelerisque nec non quam. Morbi vel odio vel enim pulvinar iaculis condimentum eget lacus. Nam in nisi sit amet augue congue semper eu sit amet tellus. Suspendisse a massa et ante lobortis cursus.</p>
+				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ut lorem nisi, a rutrum tortor. Sed dictum nulla vel quam accumsan ac malesuada dolor ornare. Morbi quis arcu ut lectus consectetur egestas a sit amet dolor. Suspendisse pretium augue ut nulla ultricies consequat. Phasellus a nibh non ante semper porta. Duis fermentum nibh ultrices ligula hendrerit tempus.</p>
+				<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut velit mauris, facilisis vel volutpat a, adipiscing vitae quam. Praesent massa quam, placerat id venenatis eget, laoreet tincidunt eros. Proin nec felis massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam iaculis sem id orci dapibus aliquet. Vestibulum id nunc quam, ut pellentesque sem. Aliquam porttitor elementum quam, in ultricies odio scelerisque in. Fusce tincidunt luctus nulla eu imperdiet.</p>
+				<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ornare ultrices venenatis. Fusce dignissim venenatis velit, ut fermentum lorem molestie id. Duis posuere tortor facilisis metus faucibus et tincidunt elit lobortis. Etiam sapien neque, pharetra vitae tincidunt a, elementum dapibus orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris eros sem, ornare gravida auctor id, tristique eu ligula. Cras consequat egestas nisi, ut congue ligula venenatis sit amet. Cras fermentum placerat ipsum, eu mattis purus egestas nec. In odio metus, blandit a lobortis eget, ullamcorper quis metus. Aliquam aliquam tempor massa vel cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer justo eros, gravida at cursus sed, ultricies eu metus. Mauris varius blandit dignissim. In mattis gravida nisl, in sagittis eros cursus in.</p>
+				<p>Etiam quam tellus, auctor ac varius at, venenatis placerat turpis. Pellentesque sagittis justo id purus dignissim ut eleifend eros mollis. Aenean magna tellus, dignissim eu ultrices et, tempor in enim. Donec ligula enim, eleifend at imperdiet sit amet, pharetra ut nisi. Cras at mi nibh. Curabitur tempor justo arcu, ac vestibulum diam. Vestibulum non euismod mauris. Cras consectetur vulputate velit non facilisis. Phasellus sit amet augue sit amet augue molestie ornare non eget ipsum. Aliquam semper, magna non convallis viverra, elit nisl viverra lorem, placerat lacinia risus dolor nec turpis. Vivamus arcu nunc, ultricies et aliquet sed, bibendum eu nisi. Etiam nec neque sit amet purus volutpat aliquam. Nam leo eros, suscipit ullamcorper bibendum quis, varius a arcu.</p>
+			</article>
+		</div>
 	</body>
 </html>
